@@ -32,4 +32,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+    Route::get('/Menu1', function () {
+        return Inertia::render('Menu1');
+    })->name('Menu1');
+    Route::get('/Menu2', function () {
+        return Inertia::render('Menu2');
+    })->name('Menu2');
 });
