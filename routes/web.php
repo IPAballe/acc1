@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controller\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,5 +43,11 @@ Route::middleware([
     Route::get('/article', function () {
         return Inertia::render('Article');
     })->name('article');
+
+    Route::get('/index', [HomeController::class, 'index'])->name('home');
+    
+    Route::get('/index', function () {
+        return Inertia::render('Home/index');
+    })->name('index');
 
 });
